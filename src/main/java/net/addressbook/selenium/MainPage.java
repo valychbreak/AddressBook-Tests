@@ -19,6 +19,12 @@ public class MainPage extends AbstractPage {
     @FindBy(css = "#nav > ul:nth-child(1) > li:nth-child(4) > a:nth-child(1)")
     private WebElement nextBirthdays;
 
+    @FindBy(xpath = "//*[@id=\"nav\"]/ul/li[3]/a")
+    private WebElement groupsLocator;
+
+    @FindBy(xpath = "//*[@id=\"nav\"]/ul/li[6]/a")
+    private WebElement printPhonesLocator;
+
     private By searchCountLocator = By.id("search_count");
 
     public MainPage(WebDriver driver) {
@@ -50,6 +56,16 @@ public class MainPage extends AbstractPage {
         return PageFactory.initElements(driver, NextBirthPage.class);
     }
 
+    public GroupsPage clickGroupsPage() {
+        groupsLocator.click();
+        return PageFactory.initElements(driver, GroupsPage.class);
+    }
+
+    public PrintPhonesPage clickPrintPhonesPage() {
+        printPhonesLocator.click();
+        return PageFactory.initElements(driver, PrintPhonesPage.class);
+    }
+
     public WebElement getSearchField() {
         return searchField;
     }
@@ -64,5 +80,9 @@ public class MainPage extends AbstractPage {
 
     public By getSearchCountLocator() {
         return searchCountLocator;
+    }
+
+    public WebElement getGroupsLocator() {
+        return groupsLocator;
     }
 }
