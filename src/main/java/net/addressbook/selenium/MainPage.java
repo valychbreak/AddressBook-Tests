@@ -46,9 +46,14 @@ public class MainPage extends AbstractPage {
         return this;
     }
 
-    public MainPage goToMain() {
+    public MainPage clickHome() {
         driver.findElement(By.linkText("home")).click();
         return this;
+    }
+
+    public AddNewPage clickAddNew() {
+        driver.findElement(By.linkText("add new")).click();
+        return PageFactory.initElements(driver, AddNewPage.class);
     }
 
     public PrintAllPage clickPrintAll() {

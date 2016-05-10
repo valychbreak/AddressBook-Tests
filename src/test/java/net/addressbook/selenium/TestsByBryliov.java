@@ -37,6 +37,29 @@ public class TestsByBryliov {
         driver.close();
     }
 
+    @Test
+    public void addNewContactTest() {
+        AddNewPage addNewPage = mainPage.clickAddNew();
+
+        String firstName = "Asdf";
+        String lastName = "Asdf";
+        String addressPrim = "Asdf";
+        String homeTel = "Asdf";
+        String mobileTel = "Asdf";
+        String workTel = "Asdf";
+        String email1 = "Asdf";
+        String email2 = "Asdf";
+        String dayBirth = "Asdf";
+        String monthBirth = "Asdf";
+        String yearBirth = "Asdf";
+        String group = "Asdf";
+        String addressSec = "Asdf";
+        String homeSecondary = "Asdf";
+
+        addNewPage.addNewAddressBookEntry(firstName, lastName, addressPrim, homeTel, mobileTel, workTel, email1,
+                email2, dayBirth, monthBirth, yearBirth, group, addressSec, homeSecondary);
+    }
+
     /**
      * Checks whether the result value of "Number of results:" is greater than 0
      * @throws IOException

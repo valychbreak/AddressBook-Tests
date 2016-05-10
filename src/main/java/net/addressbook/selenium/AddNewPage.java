@@ -10,6 +10,48 @@ import org.openqa.selenium.support.FindBy;
  * Created by Nostalex on 10.05.2016.
  */
 public class AddNewPage extends AbstractPage{
+    @FindBy(name = "firstname")
+    private WebElement firstNameLocator;
+
+    @FindBy(name = "lastname")
+    private WebElement lastNameLocator;
+
+    @FindBy(name = "address")
+    private WebElement addressPrimaryLocator;
+
+    @FindBy(name = "home")
+    private WebElement homeTelLocator;
+
+    @FindBy(name = "mobile")
+    private WebElement mobileTelLocator;
+
+    @FindBy(name = "work")
+    private WebElement workTelLocator;
+
+    @FindBy(name = "email")
+    private WebElement email1Locator;
+
+    @FindBy(name = "email2")
+    private WebElement email2Locator;
+
+    @FindBy(name = "bday")
+    private WebElement dayBirthLocator;
+
+    @FindBy(name = "bmonth")
+    private WebElement monthBirthLocator;
+
+    @FindBy(name = "byear")
+    private WebElement yearBirthLocator;
+
+    @FindBy(name = "new_group")
+    private WebElement groupLocator;
+
+    @FindBy(name = "address2")
+    private WebElement addressSecondaryLocator;
+
+    @FindBy(name = "phone2")
+    private WebElement homeSecondaryLocator;
+
 
     public AddNewPage(WebDriver driver) {
         super(driver);
@@ -18,50 +60,6 @@ public class AddNewPage extends AbstractPage{
             throw new IllegalStateException("This is not Adding page!");
         }
     }
-
-    @FindBy(name = "firstname")
-    WebElement firstNameLocator;
-
-    @FindBy(name = "lastname")
-    WebElement lastNameLocator;
-
-    @FindBy(name = "address")
-    WebElement addressPrimaryLocator;
-
-    @FindBy(name = "home")
-    WebElement homeTelLocator;
-
-    @FindBy(name = "mobile")
-    WebElement mobileTelLocator;
-
-    @FindBy(name = "work")
-    WebElement workTelLocator;
-
-    @FindBy(name = "email")
-    WebElement email1Locator;
-
-    @FindBy(name = "email2")
-    WebElement email2Locator;
-
-    @FindBy(name = "bday")
-    WebElement dayBirthLocator;
-
-    @FindBy(name = "bmonth")
-    WebElement monthBirthLocator;
-
-    @FindBy(name = "byear")
-    WebElement yearBirthLocator;
-
-    @FindBy(name = "new_group")
-    WebElement groupLocator;
-
-
-    @FindBy(name = "address2")
-    WebElement addressSecondaryLocator;
-
-    @FindBy(name = "phone2")
-    WebElement homeSecondaryLocator;
-
 
     public WebElement getFirstNameLocator() {
         return firstNameLocator;
