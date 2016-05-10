@@ -1,5 +1,6 @@
 package net.addressbook.selenium;
 
+import net.addressbook.selenium.util.TestUtil;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,18 +24,18 @@ public class LanguageTest {
     private MainPage mainPage;
 
     @Before
-    public void openBrowser() {
-        driver = TestUtil.initializeDriverOther("http://localhost/addressbookv4.1.4/");
+    public void setUp() {
+        driver = TestUtil.initializeDriver();
         mainPage = PageFactory.initElements(driver, MainPage.class);
     }
 
     @After
-    public void end() {
+    public void tearDown() {
         driver.close();
     }
 
     @Test
-    public void ensure(){
+    public void ensure() {
         mainPage.getExtendedLanguages().click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

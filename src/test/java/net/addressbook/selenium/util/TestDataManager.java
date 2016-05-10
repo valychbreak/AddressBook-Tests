@@ -1,4 +1,4 @@
-package net.addressbook.selenium;
+package net.addressbook.selenium.util;
 
 import java.io.File;
 

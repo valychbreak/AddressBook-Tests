@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 /**
  * Created by Valeriy on 6/5/2016.
@@ -24,6 +27,17 @@ public class MainPage extends AbstractPage {
 
     @FindBy(xpath = "//*[@id=\"nav\"]/ul/li[6]/a")
     private WebElement printPhonesLocator;
+
+    @FindBy(xpath = "//*[@id=\"content\"]/form[2]/div[3]/input")
+    private WebElement addToGroupBtn;
+
+    @FindBy(name = "to_group")
+    private WebElement  groupSelect;
+    private Select      toGroupSelect;
+
+    @FindBy(id = "MassCB")
+    private WebElement selectAllBtn;
+
 
     private By searchCountLocator = By.id("search_count");
 
@@ -74,6 +88,21 @@ public class MainPage extends AbstractPage {
     public PrintPhonesPage clickPrintPhonesPage() {
         printPhonesLocator.click();
         return PageFactory.initElements(driver, PrintPhonesPage.class);
+    }
+
+    public void addEntriesToGroup(String groupName) {
+        toGroupSelect = new Select(groupSelect);
+        toGroupSelect.selectByVisibleText(groupName);
+        addToGroupBtn.click();
+    }
+
+    public boolean checkAddingToGroup() {
+        WebElement msgBox = driver.findElement(By.className("msgbox"));
+        return msgBox.getText().contains("Users added");
+    }
+
+    public Select getToGroupSelect() {
+        return toGroupSelect;
     }
 
     public WebElement getSearchField() {

@@ -1,5 +1,6 @@
 package net.addressbook.selenium;
 
+import net.addressbook.selenium.util.TestUtil;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,9 +21,7 @@ public class GroupTest {
 
     @Before
     public void setUp() throws Exception {
-        driver = new FirefoxDriver();
-        driver.get("http://localhost/addressbook/");
-
+        driver = TestUtil.initializeDriver();
         mainPage = PageFactory.initElements(driver, MainPage.class);
     }
 

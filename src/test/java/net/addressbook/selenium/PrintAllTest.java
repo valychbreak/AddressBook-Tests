@@ -10,29 +10,30 @@ import org.openqa.selenium.support.PageFactory;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created by Nostalex on 10.05.2016.
+ * Created by Valeriy on 10/5/2016.
  */
-public class NextBirthTest {
-    private WebDriver driver;
+public class PrintAllTest {
 
+    private WebDriver driver;
     private MainPage mainPage;
 
+
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
         driver = TestUtil.initializeDriver();
         mainPage = PageFactory.initElements(driver, MainPage.class);
     }
 
     @After
-    public void tearDown() {
+    public void tearDown() throws Exception {
         driver.quit();
     }
 
     @Test
-    public void newBirthday(){
+    public void printAllPrintsAllContacts() {
         try {
-            NextBirthPage nextBirthPage = mainPage.clickNextBirthday();
-            assertTrue(nextBirthPage.getBirthdaysTable() != null);
+            PrintAllPage printAllPage = mainPage.clickPrintAll();
+            assertTrue(printAllPage.getTableView() != null);
         } catch(IllegalStateException e) {
             assertTrue(false);
         }
