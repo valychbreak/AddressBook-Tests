@@ -13,6 +13,9 @@ public class MainPage extends AbstractPage {
     @FindBy(name = "searchstring")
     private WebElement searchField;
 
+    @FindBy(css = "#top > a:nth-child(1)")
+    private WebElement extendedLanguages;
+
     private By searchCountLocator = By.id("search_count");
 
     public MainPage(WebDriver driver) {
@@ -41,6 +44,10 @@ public class MainPage extends AbstractPage {
 
     public WebElement getSearchField() {
         return searchField;
+    }
+
+    public WebElement getExtendedLanguages() {
+        return extendedLanguages;
     }
 
     public By getSearchCountLocator() {

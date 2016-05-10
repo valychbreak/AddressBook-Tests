@@ -19,4 +19,9 @@ public class TestUtil {
         driver.get(url);
         return driver;
     }
+    public static WebDriver initializeDriverOther(String url) {
+        WebDriver driver = new FirefoxDriver();
+        driver.get(url);
+        return driver;
+    }
 }
