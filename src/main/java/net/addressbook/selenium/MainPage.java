@@ -35,9 +35,14 @@ public class MainPage extends AbstractPage {
         }
     }
 
-    public MainPage typeInSearchFile(String searchString) {
+    public MainPage typeInSearchField(String searchString) {
         searchField.sendKeys(searchString);
         searchField.submit();
+        return this;
+    }
+
+    public MainPage clearSearchField() {
+        searchField.clear();
         return this;
     }
 
