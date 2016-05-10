@@ -16,6 +16,9 @@ public class MainPage extends AbstractPage {
     @FindBy(css = "#top > a:nth-child(1)")
     private WebElement extendedLanguages;
 
+    @FindBy(css = "#nav > ul:nth-child(1) > li:nth-child(4) > a:nth-child(1)")
+    private WebElement nextBirthdays;
+
     private By searchCountLocator = By.id("search_count");
 
     public MainPage(WebDriver driver) {
@@ -42,12 +45,21 @@ public class MainPage extends AbstractPage {
         return PageFactory.initElements(driver, PrintAllPage.class);
     }
 
+    public NextBirthPage clickNextBirthday() {
+        driver.findElement(By.linkText("next birthdays")).click();
+        return PageFactory.initElements(driver, NextBirthPage.class);
+    }
+
     public WebElement getSearchField() {
         return searchField;
     }
 
     public WebElement getExtendedLanguages() {
         return extendedLanguages;
+    }
+
+    public WebElement getNextBirthdays() {
+        return nextBirthdays;
     }
 
     public By getSearchCountLocator() {
