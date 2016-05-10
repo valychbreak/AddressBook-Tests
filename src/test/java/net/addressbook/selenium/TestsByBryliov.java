@@ -61,7 +61,7 @@ public class TestsByBryliov {
     }
 
     private void checkSearchResult(String str) throws Exception {
-        mainPage.typeInSearchField("Nig");
+        mainPage.typeInSearchField(str);
         WebElement searchCount = (new WebDriverWait(driver, 10))
                 .until(ExpectedConditions.presenceOfElementLocated(mainPage.getSearchCountLocator()));
         if(Integer.parseInt(searchCount.getText()) == 0) {
