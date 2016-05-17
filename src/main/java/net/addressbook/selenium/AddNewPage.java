@@ -52,11 +52,14 @@ public class AddNewPage extends AbstractPage{
     @FindBy(name = "phone2")
     private WebElement homeSecondaryLocator;
 
+    @FindBy(name = "submit")
+    private WebElement submitBtn;
+
 
     public AddNewPage(WebDriver driver) {
         super(driver);
 
-        if(driver.findElement(By.id("work")) == null) {
+        if(driver.findElement(By.name("work")) == null) {
             throw new IllegalStateException("This is not Adding page!");
         }
     }
@@ -145,6 +148,7 @@ public class AddNewPage extends AbstractPage{
         email2Locator.clear();
         email2Locator.sendKeys(email2);
 
+        /*
         dayBirthLocator.clear();
         dayBirthLocator.sendKeys(dayBirth);
 
@@ -156,6 +160,7 @@ public class AddNewPage extends AbstractPage{
 
         groupLocator.clear();
         groupLocator.sendKeys(group);
+        */
     }
 
     public void addNewAddressBookEntry(String firstName, String lastName, String addressPrimary,
@@ -171,5 +176,7 @@ public class AddNewPage extends AbstractPage{
 
         homeSecondaryLocator.clear();
         homeSecondaryLocator.sendKeys(homeSecondary);
+
+        submitBtn.click();
     }
 }

@@ -22,10 +22,12 @@ public class PrintAllTest {
     public void setUp() throws Exception {
         driver = TestUtil.initializeDriver();
         mainPage = PageFactory.initElements(driver, MainPage.class);
+        TestUtil.sleep();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestUtil.sleep();
         driver.quit();
     }
 
@@ -33,6 +35,7 @@ public class PrintAllTest {
     public void printAllPrintsAllContacts() {
         try {
             PrintAllPage printAllPage = mainPage.clickPrintAll();
+            TestUtil.sleep();
             assertTrue(printAllPage.getTableView() != null);
         } catch(IllegalStateException e) {
             assertTrue(false);

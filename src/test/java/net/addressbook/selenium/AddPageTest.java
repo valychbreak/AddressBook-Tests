@@ -20,16 +20,19 @@ public class AddPageTest {
     public void setUp() throws Exception {
         driver = TestUtil.initializeDriver();
         mainPage = PageFactory.initElements(driver, MainPage.class);
+        TestUtil.sleep();
     }
 
     @After
     public void tearDown() throws Exception {
+        TestUtil.sleep();
         driver.quit();
     }
 
     @Test
     public void addNewContactTest() {
         AddNewPage addNewPage = mainPage.clickAddNew();
+        TestUtil.sleep();
 
         String firstName = "Asdf";
         String lastName = "Asdf";
