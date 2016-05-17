@@ -10,9 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import static junit.framework.TestCase.assertTrue;
 
-/**
- * Created by strel on 10.05.2016.
- */
+
 public class PrintPhonesTest {
 
     private WebDriver driver;

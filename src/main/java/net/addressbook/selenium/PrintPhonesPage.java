@@ -6,9 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-/**
- * Created by strel on 10.05.2016.
- */
+
 public class PrintPhonesPage extends AbstractPage {
     public PrintPhonesPage(WebDriver driver) {
         super(driver);

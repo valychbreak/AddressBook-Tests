@@ -10,9 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by strel on 10.05.2016.
- */
+
 public class GroupTest {
 
     private WebDriver driver;

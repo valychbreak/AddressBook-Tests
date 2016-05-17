@@ -6,9 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by strel on 10.05.2016.
- */
+
 public class GroupsPage extends AbstractPage {
 
     @FindBy(name = "new")

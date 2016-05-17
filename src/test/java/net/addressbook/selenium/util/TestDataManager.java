@@ -2,14 +2,14 @@ package net.addressbook.selenium.util;
 
 import java.io.File;
 
-/**
- * Created by Valeriy on 10/5/2016.
- */
+
 public class TestDataManager {
     public static final int SHEET1 = 0;
     public static final int SEARCH_FIELD_DATA_SHEET = 1;
+    public static final int PRINT_ALL_CHECK_DATA_SHEET = 2;
+    public static final int ADD_NEW_DATA_SHEET = 3;
 
-    static File dataFile = null;
+    private static File dataFile = null;
 
     public File getDataFile() {
         if(dataFile == null) {

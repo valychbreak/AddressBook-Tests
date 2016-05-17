@@ -6,9 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.internal.Streams;
 import org.openqa.selenium.support.FindBy;
 
-/**
- * Created by Nostalex on 10.05.2016.
- */
+
 public class AddNewPage extends AbstractPage{
     @FindBy(name = "firstname")
     private WebElement firstNameLocator;
@@ -62,62 +60,6 @@ public class AddNewPage extends AbstractPage{
         if(driver.findElement(By.name("work")) == null) {
             throw new IllegalStateException("This is not Adding page!");
         }
-    }
-
-    public WebElement getFirstNameLocator() {
-        return firstNameLocator;
-    }
-
-    public WebElement getLastNameLocator() {
-        return lastNameLocator;
-    }
-
-    public WebElement getAddressPrimaryLocator() {
-        return addressPrimaryLocator;
-    }
-
-    public WebElement getHomeTelLocator() {
-        return homeTelLocator;
-    }
-
-    public WebElement getMobileTelLocator() {
-        return mobileTelLocator;
-    }
-
-    public WebElement getWorkTelLocator() {
-        return workTelLocator;
-    }
-
-    public WebElement getEmail1Locator() {
-        return email1Locator;
-    }
-
-    public WebElement getEmail2Locator() {
-        return email2Locator;
-    }
-
-    public WebElement getDayBirthLocator() {
-        return dayBirthLocator;
-    }
-
-    public WebElement getMonthBirthLocator() {
-        return monthBirthLocator;
-    }
-
-    public WebElement getYearBirthLocator() {
-        return yearBirthLocator;
-    }
-
-    public WebElement getGroupLocator() {
-        return groupLocator;
-    }
-
-    public WebElement getAddressSecondaryLocator() {
-        return addressSecondaryLocator;
-    }
-
-    public WebElement getHomeSecondaryLocator() {
-        return homeSecondaryLocator;
     }
 
     public void addNewAddressBookEntry(String firstName, String lastName, String addressPrimary,
@@ -178,5 +120,65 @@ public class AddNewPage extends AbstractPage{
         homeSecondaryLocator.sendKeys(homeSecondary);
 
         submitBtn.click();
+    }
+
+    public WebElement getFirstNameLocator() {
+        return firstNameLocator;
+    }
+
+    public WebElement getLastNameLocator() {
+        return lastNameLocator;
+    }
+
+    public WebElement getAddressPrimaryLocator() {
+        return addressPrimaryLocator;
+    }
+
+    public WebElement getHomeTelLocator() {
+        return homeTelLocator;
+    }
+
+    public WebElement getMobileTelLocator() {
+        return mobileTelLocator;
+    }
+
+    public WebElement getWorkTelLocator() {
+        return workTelLocator;
+    }
+
+    public WebElement getEmail1Locator() {
+        return email1Locator;
+    }
+
+    public WebElement getEmail2Locator() {
+        return email2Locator;
+    }
+
+    public WebElement getDayBirthLocator() {
+        return dayBirthLocator;
+    }
+
+    public WebElement getMonthBirthLocator() {
+        return monthBirthLocator;
+    }
+
+    public WebElement getYearBirthLocator() {
+        return yearBirthLocator;
+    }
+
+    public WebElement getGroupLocator() {
+        return groupLocator;
+    }
+
+    public WebElement getAddressSecondaryLocator() {
+        return addressSecondaryLocator;
+    }
+
+    public WebElement getHomeSecondaryLocator() {
+        return homeSecondaryLocator;
+    }
+
+    public WebElement getSubmitBtn() {
+        return submitBtn;
     }
 }

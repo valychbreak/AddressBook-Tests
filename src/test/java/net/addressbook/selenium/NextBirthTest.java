@@ -9,9 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by Nostalex on 10.05.2016.
- */
+
 public class NextBirthTest {
     private WebDriver driver;
 

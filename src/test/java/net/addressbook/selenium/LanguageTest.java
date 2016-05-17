@@ -15,9 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by Nostalex on 10.05.2016.
- */
+
 public class LanguageTest {
     private WebDriver driver;
 

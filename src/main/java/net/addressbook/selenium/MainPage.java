@@ -9,9 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-/**
- * Created by Valeriy on 6/5/2016.
- */
+
 public class MainPage extends AbstractPage {
     @FindBy(name = "searchstring")
     private WebElement searchField;
@@ -38,6 +36,8 @@ public class MainPage extends AbstractPage {
     @FindBy(id = "MassCB")
     private WebElement selectAllBtn;
 
+    @FindBy(id = "maintable")
+    private WebElement mainTable;
 
     private By searchCountLocator = By.id("search_count");
 
@@ -60,7 +60,8 @@ public class MainPage extends AbstractPage {
         return this;
     }
 
-    public MainPage clickHome() {
+    @Override
+    public MainPage goToHome() {
         driver.findElement(By.linkText("home")).click();
         return this;
     }
@@ -123,5 +124,9 @@ public class MainPage extends AbstractPage {
 
     public WebElement getGroupsLocator() {
         return groupsLocator;
+    }
+
+    public WebElement getMainTable() {
+        return mainTable;
     }
 }

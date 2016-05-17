@@ -14,9 +14,6 @@ import java.util.concurrent.TimeUnit;
 import static junit.framework.TestCase.assertTrue;
 
 
-/**
- * Created by strel on 10.05.2016.
- */
 public class AddToGroupTest {
 
     private WebDriver driver;
