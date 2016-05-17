@@ -18,6 +18,20 @@ public class TestUtil {
     public static WebDriver initializeDriver(String url) {
         WebDriver driver = new FirefoxDriver();
         driver.get(url);
+        driver.manage().window().maximize();
         return driver;
+    }
+
+    public static void sleep(long millis) {
+        try {
+            Thread.sleep(millis);
+        }
+        catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public static void sleep() {
+        sleep(3000);
     }
 }

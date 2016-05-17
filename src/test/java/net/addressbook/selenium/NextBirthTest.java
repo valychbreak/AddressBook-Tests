@@ -21,10 +21,12 @@ public class NextBirthTest {
     public void setUp() {
         driver = TestUtil.initializeDriver();
         mainPage = PageFactory.initElements(driver, MainPage.class);
+        TestUtil.sleep();
     }
 
     @After
     public void tearDown() {
+        TestUtil.sleep();
         driver.quit();
     }
 
@@ -32,6 +34,7 @@ public class NextBirthTest {
     public void newBirthday(){
         try {
             NextBirthPage nextBirthPage = mainPage.clickNextBirthday();
+            TestUtil.sleep();
             assertTrue(nextBirthPage.getBirthdaysTable() != null);
         } catch(IllegalStateException e) {
             assertTrue(false);
